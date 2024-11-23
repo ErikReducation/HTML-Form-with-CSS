@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="description" content="An academic project.">
+	<meta name="keywords" content="HTML, Form, CSS">
+	<meta name="author" content="Erik Rosenbalm">
+	<meta name="viewport" content="width=device-width">  
+	<title>HTML Form with CSS</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" >
+
+	<!--Margin view. TURN THIS OFF BEFORE PUBLISHING-->
+	<!--
+	<style>
+	div {
+		border: double cornflowerblue;
+	}
+	</style>
+	-->
+	
+</head>
+<body>
+  <form action = "results.hmlt" method = "GET">
+    <div>
+      <label>
+        Textlabel
+        <input type = "text" name = "Textlabel" id = "Textlabel">
+      </label>
+    </div>
+    <div>
+      <label for = "faveDay">Favorite Weekday></label>
+      <select name = "faveDay" id = "faveDay" multiple>
+        <option value = "a"></option>
+        <option value = "b" selected ></option>
+      </select>
+    </div>
+  </form>
+</body>
+</html>
 
