@@ -1,1 +1,22 @@
+/* Turns content into boxes */
+* {
+    box-sizing:border-box;
+    }
+    
+    [class*="col"] {
+        float:left;
+        padding: 15px;
+    }
+    
+    .row::after {
+        content:"";
+        clear:both;
+        display:block;
+    }
+/* padding between boxes */
+body {margin: 25px 25px 25px 25px;
+    color:blueviolet;
+    background-color:antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+}
