@@ -21,62 +21,157 @@ border: double cornflowerblue;
 
 </head>
 <body>
+  <div class = "container-fluid">
   <form action = "results.html" method = "GET">
-    <div><!--Text-->
+  <div clas = "row">
+    <div class = "col" style= "width:33.33%;"><!--Text-->
       <label>
         What's your deal?
         <input type = "text" name = "deal" id = "deal">
       </label>
     </div>
-    <div><!--Slidey-->
-      <label for = "faveDay">How bad is your headache?</label>
+    <div class = "col" style= "width:33.33%;"><!--Slidey-->
+      <label for = "levelOfPain">How bad is your headache?</label>
       <select name = "levelOfPain" id = "levelOfPain" multiple>
         <option label = "none" value = "none">none</option>
         <option label = "moderate" value = "moderate" selected >moderate</option>
-	<option label = "severe" value = "severe">severe</option>
+	      <option label = "severe" value = "severe">severe</option>
       </select>
     </div>
-    <div><!--Email-->
-
+    <div class = "col" style= "width:33.33%;"><!--Email-->
+      <label>
+        What's the funniest email address you've seen?
+        <input type = "email" name = "email" id = "email" placeholder = "Email" required>
+      </label>
     </div>
-    <div><!--Number-->
-
+  </div>
+  <br>
+  <div class = "row">
+    <div class = "col" style= "width:33.33%;"><!--Number-->
+      <label>
+        How many hotdogs do you eat per day, on average?
+        <input type = "number" name = "diet" id="diet" min="0" max="20" steps="1" placeholder="7 hotdogs" required>
+      </label>
     </div>
-    <div><!--Date-->
-
+    <div class = "col" style= "width:33.33%;"><!--Date-->
+      <label>
+      When did you realize it all went wrong?
+      <input type = "date" name = "date" id = "date" required min="1901-01-01">
+      </label>
     </div>
-    <div><!--Phone-->
-
+    <div class = "col" style= "width:33.33%;"><!--Phone-->
+      <label for = "phoneNumber">Emergency contact</label>
+        <input type = "tel" name = "phoneNumber" id = "phoneNumber">
     </div>
-    <div><!--Check-->
-
+  </div>
+  <br>
+  <div class = "row">
+    <div class = "col" style= "width:33.33%;"><!--Check-->
+      <div>Which of these have you eaten in the past 24 hours?</div><!--Checkbox Header-->
+      <div>
+        <label>
+          Vegetable
+          <input type = "checkbox" name = "food1" id = "Vegetable">
+        </label>
+      </div><!--Vegetable-->
+      <div>
+        <label>
+          Meat
+          <input type = "checkbox" name = "food2" id = "Meat">
+        </label>
+      </div><!--Meat-->
+      <div>
+        <label>
+          Fruit
+          <input type = "checkbox" name = "food3" id = "Fruit">
+        </label>
+      </div><!--Fruit-->
+      <div>
+        <label>
+          Starch
+          <input type = "checkbox" name = "food4" id = "Starch">
+        </label>
+      </div><!--Starch-->
+      <div>
+        <label>
+          Dairy
+          <input type = "checkbox" name = "food5" id = "Dairy">
+        </label>
+      </div><!--Dairy-->
     </div>
-    <div><!--Radio-->
-
+    <div class = "col" style= "width:33.33%;"><!--Radio-->
+      <p>Your kinsey number goes here. Round up in all cases.</p>
+      <label>
+        0
+        <input type = "radio" name = "preference" id = "0" value = "0">
+      </label>
+      <label>
+        1
+        <input type = "radio" name = "preference" id = "1" value = "1">
+      </label>
+      <label>
+        2
+        <input type = "radio" name = "preference" id = "2" value = "2">
+      </label>
+      <label>
+        3
+        <input type = "radio" name = "preference" id = "3" value = "3">
+      </label>
+      <label>
+        4
+        <input type = "radio" name = "preference" id = "4" value = "4">
+      </label>
+      <label>
+        5
+        <input type = "radio" name = "preference" id = "5" value = "5">
+      </label>
+      <label>
+        6
+        <input type = "radio" name = "preference" id = "6" value = "6">
+      </label>
     </div>
-    <div><!--Pword-->
-
+    <div class = "col" style= "width:33.33%;"><!--Pword-->
+      <label>
+        Favorite expletive?
+        <input type = "password" name = "bleep" id = "bleep" placeholder = "tarnation" required>
+      </label>
     </div>
-    <div><!--Color-->
-
+  </div>
+  <br>
+  <div class = "row">
+    <div class = "col" style= "width:33.33%;"><!--Color-->
+      <label for = "carColor">Worst color to see on a car?</label>
+      <input type = "color" name = "carColor" id = "carColor">
     </div>
-    <div><!--Textarea-->
-
-
+    <div class = "col" style= "width:33.33%;"><!--Textarea, capped to length of Twitter post as a cruel joke-->
+      <textarea name = "essay" id = "essay" maxlength = "280">
+        Write an essay (no less than 10,000 words) on the relationship between the USA and China, mentioning specifically the diplomatic tension caused by the discrepancies between official stances and PR moves, saber-rattling and cooperation, unilateral sanctions and international law, etc. You must cite both US and Chinese national media sources, international law, and at least one twitter post.
+      </textarea>
     </div>
-    <div><!--url-->
-
+    <div class = "col" style= "width:33.33%;"><!--url-->
+      <label for = "goodVideo">Favorite video online?</label>
+      <input type = "url" name = "goodVideo" id = "goodVideo">
     </div>
+  </div>
+  <hr>
+  <div class = "row">
     <div><!--hidden-->
-
+      <input type = "hidden" name="todaysPowerball" id = "todaysPowerball"
+      value = "secretNumber">
     </div>
-    <div><!--reset-->
-
-    </div>
-    <div><!--submit-->
-
+    <div class = "col" style= "width:50%;"><!--buttons-->
+      <button type = "reset">Reset</button>
+      <button type = "submit">Submit</button>
     </div>
   </form>
+
+  <div class = "col" style= "width:50%;">
+    <form action = "results.html" method = "GET" enctype="multipart/form-data">
+      Upload a picture of your pet. If you don't have one, find one on the web.
+      <input type = "file" name = "petPic" id = "petPic">
+    </form>
+  </div>
+  </div>
+  </div>
 </body>
 </html>
-
