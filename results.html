@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="utf-8">
+<meta name="description" content="An academic project.">
+<meta name="keywords" content="HTML, Form, CSS">
+<meta name="author" content="Erik Rosenbalm">
+<meta name="viewport" content="width=device-width">  
+<title>HTML Form with CSS</title>
+
+</head>
+<body>
+    <div id = "results"></div>
+    <a href = "index.html">Back to Form</a>
+
+    <script type="text/javascript">
+        const resultsList = document.getElementById('results')
+        new URLSearchParams(window.location.search).forEach((name, password) => {
+        resultsList.append(`${name} : ${password}`)
+        resultsList.append(document.createElement('br'));
+        
+        })
+        
+    </script>
+</body>
+</html>
